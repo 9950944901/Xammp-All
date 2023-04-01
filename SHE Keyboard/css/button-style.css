@@ -1,0 +1,402 @@
+/* ===============line 1============================================ */
+/* btn 1========================================= */
+.btn1_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn1_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn1_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 2========================================= */
+.btn2_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn2_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn2_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 3========================================= */
+.btn3_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn3_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn3_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 4========================================= */
+.btn4_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn4_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn4_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 5========================================= */
+.btn5_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn5_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn5_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 6========================================= */
+.btn6_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn6_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn6_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 7========================================= */
+.btn7_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn7_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn7_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 8========================================= */
+.btn8_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn8_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn8_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 9========================================= */
+.btn9_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn9_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn9_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 10========================================= */
+.btn10_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn10_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn10_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 11========================================= */
+.btn11_a{display: inline-block; position: relative; color:red; font-weight:600;  font-size:22px; top: 0px;}
+.btn11_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn11_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 12========================================= */
+.btn12_a{display: inline-block; position: relative; color:red; font-weight:600;  font-size:22px; top: 0px;}
+.btn12_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn12_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 13========================================= */
+.btn13_a{display: inline-block; position: relative; color:red; font-weight:600;  font-size:22px; top: 0px;}
+.btn13_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn13_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 14========================================= */
+.btn14_a{display: inline-block; position: relative; color:red; font-weight:600;  font-size:22px; top: 0px;}
+.btn14_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn14_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+/* btn 15========================================= */
+.btn15_a{display: inline-block; position: relative; color:red; font-weight:600;  font-size:22px; top: 0px;}
+.btn15_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:22px; top: 0px;}
+.btn15_c{display: inline-block; position: relative; color:red; font-weight:600;  top: 0px;}
+
+/* ===============line 2============================================ */
+/* btn 16========================================= */
+.btn16_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn16_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 17========================================= */
+.btn17_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn17_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 18========================================= */
+.btn18_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn18_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 19========================================= */
+.btn19_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn19_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 20========================================= */
+.btn20_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn20_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 21========================================= */
+.btn21_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn21_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 22========================================= */
+.btn22_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn22_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 23========================================= */
+.btn23_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn23_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 24========================================= */
+.btn24_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn24_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 25========================================= */
+.btn25_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn25_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 26========================================= */
+.btn26_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn26_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 27========================================= */
+.btn27_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn27_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 28========================================= */
+.btn28_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn28_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 29========================================= */
+.btn29_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn29_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 30========================================= */
+.btn30_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn30_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* ===============line 3============================================ */
+/* btn 31========================================= */
+.btn31_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn31_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 32========================================= */
+.btn32_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn32_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 33========================================= */
+.btn33_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn33_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 34========================================= */
+.btn34_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn34_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 35========================================= */
+.btn35_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn35_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 36========================================= */
+.btn36_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn36_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 37========================================= */
+.btn37_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn37_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 38========================================= */
+.btn38_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn38_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 39========================================= */
+.btn39_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn39_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 40========================================= */
+.btn40_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn40_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 41========================================= */
+.btn41_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn41_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn42 ========================================= */
+.btn42_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn42_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn43 ========================================= */
+.btn43_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn43_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn44 ========================================= */
+.btn44_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn44_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+/* btn 45========================================= */
+.btn45_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:22px; top: 0px;}
+.btn45_b{display: inline-block; position: relative; color:black; font-weight:400;  font-size:16px; top: 0px;}
+
+/* ===============line 4============================================ */
+/* btn 46========================================= */
+.btn46_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn46_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn46_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 47========================================= */
+.btn47_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn47_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn47_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 48========================================= */
+.btn48_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn48_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn48_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 49========================================= */
+.btn49_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn49_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn49_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 50========================================= */
+.btn50_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn50_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn50_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 51========================================= */
+.btn51_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn51_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn51_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 52========================================= */
+.btn52_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn52_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn52_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 53========================================= */
+.btn53_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn53_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn53_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 54========================================= */
+.btn54_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn54_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn54_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 55========================================= */
+.btn55_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn55_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn55_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 56========================================= */
+.btn56_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn56_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn56_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 57========================================= */
+.btn57_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn57_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn57_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 58========================================= */
+.btn58_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn58_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn58_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 59========================================= */
+.btn59_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn59_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn59_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn60 ========================================= */
+.btn60_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn60_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn60_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+
+/* ===============line 5============================================ */
+/* btn 61========================================= */
+.btn61_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn61_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn61_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 62========================================= */
+.btn62_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn62_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn62_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 63========================================= */
+.btn63_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn63_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn63_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 64========================================= */
+.btn64_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn64_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn64_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 65========================================= */
+.btn65_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn65_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn65_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 66========================================= */
+.btn66_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn66_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn66_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 67========================================= */
+.btn67_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn67_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn67_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 68========================================= */
+.btn68_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn68_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn68_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 69========================================= */
+.btn69_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn69_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn69_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 70========================================= */
+.btn70_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn70_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn70_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 71========================================= */
+.btn71_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn71_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn71_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 72========================================= */
+.btn72_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn72_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn72_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 73========================================= */
+.btn73_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn73_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn73_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 74========================================= */
+.btn74_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn74_b{display: inline-block; position: relative; color:black; font-weight:600;  font-size:16px; top: -23px;}
+.btn74_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 75========================================= */
+.btn75_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn75_b{display: inline-block; position: relative; color:black; font-weight:600;  font-size:16px; top: -23px;}
+.btn75_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+
+/* ===============line 6============================================ */
+/* btn 76========================================= */
+.btn76_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn76_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn76_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 77========================================= */
+.btn77_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn77_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn77_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 78========================================= */
+.btn78_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn78_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn78_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 79========================================= */
+.btn79_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn79_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn79_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 80========================================= */
+.btn80_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn80_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn80_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 81========================================= */
+.btn81_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn81_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn81_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 82========================================= */
+.btn82_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn82_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn82_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 83========================================= */
+.btn83_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn83_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn83_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 84========================================= */
+.btn84_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn84_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn84_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 85========================================= */
+.btn85_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn85_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn85_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 86========================================= */
+.btn86_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn86_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn86_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 87========================================= */
+.btn87_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn87_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn87_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 88========================================= */
+.btn88_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn88_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn88_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 89========================================= */
+.btn89_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn89_b{display: inline-block; position: relative; color:black; font-weight:600;  font-size:16px; top: -23px;}
+.btn89_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 90========================================= */
+.btn90_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn90_b{display: inline-block; position: relative; color:black; font-weight:600;  font-size:16px; top: -23px;}
+.btn90_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+
+/* ===============line 7============================================ */
+/* btn 91========================================= */
+.btn91_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn91_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn91_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 92========================================= */
+.btn92_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn92_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn92_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 93========================================= */
+.btn93_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn93_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn93_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn94========================================= */
+.btn94_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn94_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn94_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 95========================================= */
+.btn95_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn95_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn95_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 96========================================= */
+.btn96_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn96_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn96_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 97========================================= */
+.btn97_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn97_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn97_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 98========================================= */
+.btn98_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn98_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn98_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 99========================================= */
+.btn99_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn99_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn99_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 100========================================= */
+.btn100_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn100_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn100_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 101========================================= */
+.btn101_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn101_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn101_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 102========================================= */
+.btn102_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn102_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn102_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 103========================================= */
+.btn103_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn103_b{display: inline-block; position: relative; color:blue; font-weight:600;  font-size:16px; top: -5px;}
+.btn103_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 104========================================= */
+.btn104_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn104_b{display: inline-block; position: relative; color:black; font-weight:600;  font-size:16px; top: -23px;}
+.btn104_c{display: inline-block; position: relative; color:red; font-weight:600;  top: -5px;}
+/* btn 105========================================= */
+.btn105_a{display: inline-block; position: relative; color:black; font-weight:600;  font-size:28px; top: -5px;}
+.btn105_b{display: inline-block; position: relative; color:black; font-weight:600;  font-size:16px; top: -23px;}
+.btn105_c{}

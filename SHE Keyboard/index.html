@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Ravinder Godara">
+		
+		<title>Keyboard</title>
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/heroic-features.css" rel="stylesheet">
+		<link href="css/button-style.css" rel="stylesheet">
+		
+		
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"/> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="autosuggest.js"></script>
+		<script src="code.js"></script>
+		<style>
+			.header{
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+			}
+			.textarea_container{
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+			}
+			textarea{
+			width: 100%;
+			height: 100px;
+			}
+			pre{
+			border: dotted 2px #2e39cf;
+			}
+		</style>
+		
+		
+		<style>
+			.popover {
+			display: block;
+			min-width: 5.5rem;
+			height: auto;
+			position: fixed;
+			background-color: #ffffff;
+			color: #1d1d1d;
+			z-index: 1060;
+			border: 1px solid #dfdfdf;
+			cursor: default;
+			padding: 0.8125rem;
+			max-width: calc(50% - 12px);
+			}
+			
+			.popover>* {
+			max-width: 100%;
+			}
+			
+			.popover .popover-content {
+			display: block;
+			position: relative;
+			z-index: 50;
+			}
+			
+			.popover .popover-close-button {
+			z-index: 100;
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 26px;
+			color: red;
+			}
+			
+			.neb::before {
+			display: block;
+			position: absolute;
+			content: "";
+			width: 1rem;
+			height: 1rem;
+			background-color: inherit;
+			border: 1px solid transparent;
+			border-right-color: inherit;
+			border-bottom-color: inherit;
+			}
+			
+			.neb.neb-s::before {
+			top: 100%;
+			left: 50%;
+			-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			}
+		</style>
+		
+		<script>
+			function
+			setsindilng() {
+			document.getElementById("hiddenlbl").value =
+			"sindhi";
+			document.getElementById("note-textarea").style.color =
+			'#008000';
+			<!-- document.getElementById("note-textarea").style.direction = "RTL"; -->
+			
+			}
+			
+			function
+			sethindilng() {
+			document.getElementById("hiddenlbl").value =
+			"hindi";
+			document.getElementById("note-textarea").style.color =
+			'#0000FF';
+			document.getElementById("note-textarea").style.direction = "RTL";
+			}
+			
+			function
+			setenglishlng() {
+			document.getElementById("hiddenlbl").value =
+			"english";
+			document.getElementById("note-textarea").style.color =
+			'#DC3545';
+			document.getElementById("note-textarea").style.direction = "RTL";
+			
+			}
+			
+			//for Hindi and english 
+			function insertAtCaret(element, text) {
+			if (document.selection) {
+			element.focus();
+			var sel = document.selection.createRange();
+			sel.text = text;
+			element.focus();
+			} else if (element.selectionStart || element.selectionStart === 0) {
+			var startPos = element.selectionStart;
+			var endPos = element.selectionEnd;
+			var scrollTop = element.scrollTop;
+			element.value = element.value.substring(0, startPos) + text + element.value.substring(endPos, element.value
+			.length);
+			element.focus();
+			element.selectionStart = startPos + text.length;
+			element.selectionEnd = startPos + text.length;
+			element.scrollTop = scrollTop;
+			} else {
+			element.value += text;
+			element.focus();
+			}
+			}
+			
+			// for sindhi
+			function insertAtCaret2(element, text) {
+			if (document.selection) {
+			element.focus();
+			var sel = document.selection.createRange();
+			sel.text = text;
+			element.focus();
+			} else if (element.selectionStart || element.selectionStart === 0) {
+			var startPos = element.selectionStart;
+			var endPos = element.selectionEnd;
+			var scrollTop = element.scrollTop;
+			element.value = element.value.substring(0, startPos) + text + element.value.substring(endPos, element.value
+			.length);
+			element.focus();
+			element.selectionStart = startPos + text.length;
+			element.selectionEnd = startPos + text.length;
+			element.scrollTop = scrollTop;
+			} else {
+			element.value += text;
+			element.focus();
+			}
+			}
+		</script>
+		
+		<script>
+			function setshiftkeywords()
+			{
+				if(document.getElementById("isshiftactive").value=="false")
+				{
+					document.getElementById("isshiftactive").value="true";
+					document.getElementById("spanshift").style.color="red";
+					document.getElementById("shiftstatus").style.display="block";
+				}
+				else if(document.getElementById("isshiftactive").value=="true")
+				{
+					document.getElementById("isshiftactive").value="false";
+					document.getElementById("spanshift").style.color="black";
+					document.getElementById("shiftstatus").style.display="none";
+				}
+				
+				var x = document.getElementById("line2div");
+						var y = document.getElementById("line02div");
+						var a = document.getElementById("line3div");
+						var b = document.getElementById("line03div");
+						
+						if (x.style.display === "block") {
+							y.style.display = "block";
+							x.style.display = "none";
+							
+							b.style.display = "block";
+							a.style.display = "none";
+						} 
+						else if (y.style.display === "block") {
+							x.style.display = "block";
+							y.style.display = "none";
+							a.style.display = "block";
+							b.style.display = "none";
+						} 
+				
+			}
+		</script>
+		
+		<script>
+			function sethalfhindi() {
+				if(document.getElementById("isaltactive").value=="false")
+				{
+					document.getElementById("span12").textContent="व्";
+					document.getElementById("span14").textContent="स्क";
+					document.getElementById("span15").textContent="व्";
+					document.getElementById("span45").textContent="ष्";
+					document.getElementById("span46").textContent="झ्";
+					document.getElementById("span48").textContent="ज्";
+					document.getElementById("span49").textContent="स्ह";
+					document.getElementById("span50").textContent="ठ्";
+					document.getElementById("span51").textContent="ट्";
+					document.getElementById("span52").textContent="थ्";
+					document.getElementById("span53").textContent="त्";
+					document.getElementById("span54").textContent="भ्";
+					document.getElementById("span55").textContent="प्";
+					document.getElementById("span57").textContent="ब्";
+					document.getElementById("span59").textContent="ज्ञ्";
+					document.getElementById("span60").textContent="क्ष्";
+					document.getElementById("span61").textContent="ड़्";
+					document.getElementById("span62").textContent="र्";
+					document.getElementById("span63").textContent="ज़्";
+					document.getElementById("span64").textContent="ढ्";
+					document.getElementById("span65").textContent="ङ्";
+					document.getElementById("span66").textContent="ड्";
+					document.getElementById("span67").textContent="ध्";
+					document.getElementById("span68").textContent="द्";
+					document.getElementById("span69").textContent="ख्";
+					document.getElementById("span70").textContent="ह्";
+					document.getElementById("span71").textContent="छ्";
+					document.getElementById("span72").textContent="च्";
+					document.getElementById("span73").textContent="ञ्";
+					document.getElementById("span76").textContent="क्";
+					document.getElementById("span77").textContent="क़्";
+					document.getElementById("span78").textContent="फ्";
+					document.getElementById("span79").textContent="फ़्";
+					document.getElementById("span80").textContent="ग्";
+					document.getElementById("span82").textContent="ज़्";
+					document.getElementById("span83").textContent="त्";
+					document.getElementById("span84").textContent="ज़्";
+					document.getElementById("span85").textContent="स्";
+					document.getElementById("span86").textContent="श्";
+					document.getElementById("span87").textContent="स्";
+					document.getElementById("span88").textContent="ज़्";
+					document.getElementById("span91").textContent="य्";
+					document.getElementById("span92").textContent="य़्";
+					document.getElementById("span93").textContent="ह्";
+					document.getElementById("span94").textContent="व्";
+					document.getElementById("span95").textContent="ण्";
+					document.getElementById("span96").textContent="न्";
+					document.getElementById("span97").textContent="म्";
+					document.getElementById("span98").textContent="ल्";
+					document.getElementById("span99").textContent="ग्";
+					document.getElementById("span100").textContent="घ्";
+					document.getElementById("span101").textContent="ग़्";
+					document.getElementById("span102").textContent="ग्";
+					document.getElementById("span103").textContent="ख़्";
+					
+					document.getElementById("span_a_16").textContent='"';
+					document.getElementById("span_a_16").title="Double Quote";
+					
+					document.getElementById("span_a_17").textContent="÷";
+					document.getElementById("span_a_17").title="Division Sign";
+					
+					document.getElementById("span_a_18").textContent="¦";
+					document.getElementById("span_a_18").title="Broken Line";
+					
+					document.getElementById("span_a_19").textContent=":";
+					document.getElementById("span_a_19").title="Colon";
+					
+					document.getElementById("span_a_20").textContent="~";
+					document.getElementById("span_a_20").title="Tilde";
+					
+					document.getElementById("span_a_21").textContent="{";
+					document.getElementById("span_a_21").title="Curly Bracket";
+					
+					document.getElementById("span_a_22").textContent="[";
+					document.getElementById("span_a_22").title="Square brackets";
+					
+					document.getElementById("span_a_23").textContent="}";
+					document.getElementById("span_a_23").title="closing Curly Bracket";
+					
+					document.getElementById("span_a_24").textContent="]";
+					document.getElementById("span_a_24").title="closing Square brackets";
+					
+					document.getElementById("span_a_25").textContent="©";
+					document.getElementById("span_a_25").title="Copyright symbol";
+					
+					document.getElementById("span_a_26").textContent="®";
+					document.getElementById("span_a_26").title="Registered Symbol";
+					
+					document.getElementById("span_a_27").textContent="™";
+					document.getElementById("span_a_27").title="Trade Mark";
+					
+					document.getElementById("span_a_28").textContent="€";
+					document.getElementById("span_a_28").title="Euro";
+					
+					document.getElementById("span_a_29").textContent="℅";
+					document.getElementById("span_a_29").title="Care Of";
+					
+					document.getElementById("span_a_30").textContent="≅";
+					document.getElementById("span_a_30").title="Estimate Symbol";
+					
+					
+					document.getElementById("isaltactive").value="true";
+					document.getElementById("spanalt").style.color="red";
+					document.getElementById("altstatus").style.display="block";
+				}
+				else if(document.getElementById("isaltactive").value=="true")
+				{
+					document.getElementById("span12").textContent="व";
+					document.getElementById("span14").textContent="स क";
+					document.getElementById("span15").textContent="व";
+					document.getElementById("span45").textContent="ष";
+					document.getElementById("span46").textContent="झ";
+					document.getElementById("span48").textContent="ज";
+					document.getElementById("span49").textContent="सह";
+					document.getElementById("span50").textContent="ठ";
+					document.getElementById("span51").textContent="ट";
+					document.getElementById("span52").textContent="थ";
+					document.getElementById("span53").textContent="त";
+					document.getElementById("span54").textContent="भ";
+					document.getElementById("span55").textContent="प";
+					document.getElementById("span57").textContent="ब";
+					document.getElementById("span59").textContent="ज्ञ";
+					document.getElementById("span60").textContent="क्ष";
+					document.getElementById("span61").textContent="ड़";
+					document.getElementById("span62").textContent="र";
+					document.getElementById("span63").textContent="ज़";
+					document.getElementById("span64").textContent="ढ";
+					document.getElementById("span65").textContent="ङ";
+					document.getElementById("span66").textContent="ड";
+					document.getElementById("span67").textContent="ध";
+					document.getElementById("span68").textContent="द";
+					document.getElementById("span69").textContent="ख";
+					document.getElementById("span70").textContent="ह";
+					document.getElementById("span71").textContent="छ";
+					document.getElementById("span72").textContent="च";
+					document.getElementById("span73").textContent="ञ";
+					document.getElementById("span76").textContent="क";
+					document.getElementById("span77").textContent="क़";
+					document.getElementById("span78").textContent="फ";
+					document.getElementById("span79").textContent="फ़";
+					document.getElementById("span80").textContent="ग";
+					document.getElementById("span82").textContent="ज़";
+					document.getElementById("span83").textContent="त";
+					document.getElementById("span84").textContent="ज़";
+					document.getElementById("span85").textContent="स";
+					document.getElementById("span86").textContent="श";
+					document.getElementById("span87").textContent="स";
+					document.getElementById("span88").textContent="ज़";
+					document.getElementById("span91").textContent="य";
+					document.getElementById("span92").textContent="य़";
+					document.getElementById("span93").textContent="ह";
+					document.getElementById("span94").textContent="व";
+					document.getElementById("span95").textContent="ण";
+					document.getElementById("span96").textContent="न";
+					document.getElementById("span97").textContent="म";
+					document.getElementById("span98").textContent="ल";
+					document.getElementById("span99").textContent="ग";
+					document.getElementById("span100").textContent="घ";
+					document.getElementById("span101").textContent="ग़";
+					document.getElementById("span102").textContent="ग";
+					document.getElementById("span103").textContent="ख़";
+					
+					document.getElementById("span_a_16").textContent="!";
+					document.getElementById("span_a_16").title="";
+					
+					document.getElementById("span_a_17").textContent="@";
+					document.getElementById("span_a_17").title="";
+					
+					document.getElementById("span_a_18").textContent="#";
+					document.getElementById("span_a_18").title="";
+					
+					document.getElementById("span_a_19").textContent="₹";
+					document.getElementById("span_a_19").title="";
+					
+					document.getElementById("span_a_20").textContent="%";
+					document.getElementById("span_a_20").title="";
+					
+					document.getElementById("span_a_21").textContent="^";
+					document.getElementById("span_a_21").title="";
+					
+					document.getElementById("span_a_22").textContent="ੴ";
+					document.getElementById("span_a_22").title="";
+					
+					document.getElementById("span_a_23").textContent="*";
+					document.getElementById("span_a_23").title="";
+					
+					document.getElementById("span_a_24").textContent="(";
+					document.getElementById("span_a_24").title="";
+					
+					document.getElementById("span_a_25").textContent=")";
+					document.getElementById("span_a_25").title="";
+					
+					document.getElementById("span_a_26").textContent="_";
+					document.getElementById("span_a_26").title="Underscore";
+					
+					document.getElementById("span_a_27").textContent="'";
+					document.getElementById("span_a_27").title="Single Quote";
+					
+					document.getElementById("span_a_28").textContent="-";
+					document.getElementById("span_a_28").title="Minus";
+					
+					document.getElementById("span_a_29").textContent="?";
+					document.getElementById("span_a_29").title="Question Mark";
+					
+					document.getElementById("span_a_30").textContent="۾";
+					document.getElementById("span_a_30").title="Mein";
+					
+					
+					
+					
+					document.getElementById("isaltactive").value="false";
+					document.getElementById("spanalt").style.color="black";
+					document.getElementById("altstatus").style.display="none";
+				}
+			}
+		</script>
+		
+		<style>
+			.fixed {
+			overflow: hidden;
+			position: fixed
+			}
+			
+			.scrollit {
+			height: 515px;
+			width: 105%;
+			overflow-y: scroll;
+			}
+		</style>
+		<style>
+			/* width */
+			::-webkit-scrollbar {
+			width: 8px;
+			}
+			
+			/* Track */
+			::-webkit-scrollbar-track {
+			background: #f1f1f1;
+			}
+			
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+			background: #888;
+			}
+			
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+			background: #555;
+			}
+		</style>
+		<style>
+			.shadowdiv {
+			width: 100%;
+			height: 40px;
+			-webkit-box-shadow: 0 8px 6px -6px black;
+			-moz-box-shadow: 0 8px 6px -6px black;
+			box-shadow: 0 10px 6px -6px #777;
+			margin: 15px 0;
+			background: #fff;
+			}
+			
+			.buttonhalfhindi {
+			background: #E1D987;
+			border: 1px solid rgba(21, 6, 148, 0.9) !important;
+			border-radius: 13px;
+			width: 51px;
+			height: 32px;
+			font-size: 19px;
+			}
+		</style>
+	</head>
+	
+	
+	<body style="padding-top:5px">
+		
+		<input type="hidden" id="hiddenlbl" name="hiddenlbl" value="english">
+		<input type="hidden" id="isaltactive" name="isaltactive" value="false">
+		<input type="hidden" id="isshiftactive" name="isshiftactive" value="false">
+		
+		<!-- Page Content -->
+		<div class="container">
+			<!--<form name="myform">
+			Jumbotron Header -->
+			
+			<div class="row ">
+				<div class="col-lg-12">
+					
+					<textarea dir="auto" style="text-align: right;" rows="4" tabindex="0" title="Pull down the bottom right corner to increase text area." id="note-textarea" class="form-control"
+					style="font-size:large; width:100%; color:#DC3545" placeholder="
+					پيارا ڀائرن ۽ ڀينرن کي، انگريزيء جي سکيا، سنڌي ۽ انگريزي
+					प्यारे भाइयों बहनों आइए हिंदी, सिंधी  और अंग्रेजी सीखें 
+					اي بي سي ڊي ايف جي ج ج Ô ا q r ر u و و و و ي ز ز
+					Learn Sindhi, Hindi and English"></textarea>
+					
+					<p class="text-center"><span style="font-weight:bold; margin-bottom:-20px; color:black">Please select language for
+					typing.&nbsp;</span><button type="button" class="btn btn-sm btn-danger"
+					onclick="setenglishlng()">English</button>&nbsp;<button type="button"
+					class="btn btn-sm btn-info" onclick="sethindilng()">Hindi</button>&nbsp;<button type="button"
+					onclick="setsindilng()" class="btn btn-sm btn-success" style="background:orange; color:black">Sindhi</button>&nbsp;<span
+					style="font-weight:bold; margin-bottom:0px; color:black">कृपया टाइपिंग के लिए भाषा का चयन कीजिए |</span></p>
+					
+				</div>
+				
+			</div>
+			<div class="clearfix"></div>
+			<div style="background:#808B96">
+				<style>
+					.buttonpro {
+					background: rgba(224, 216, 124, 0.9) !important;
+					border: 1px solid rgba(21, 6, 148, 0.9) !important;
+					border-radius: 13px;
+					width: 65px;
+					height: 47px;
+					font-size: 15px;
+					}
+					
+					.buttonbig {
+					background: rgba(224, 216, 124, 0.9) !important;
+					border: 1px solid rgba(21, 6, 148, 0.9) !important;
+					border-radius: 13px;
+					width: 135px;
+					height: 45px;
+					}
+					
+					.buttonlarge {
+					background: rgba(224, 216, 124, 0.9) !important;
+					border: 1px solid rgba(21, 6, 148, 0.9) !important;
+					border-radius: 13px;
+					width: 110px;
+					height: 45px;
+					}
+					
+					.buttonxxlarge {
+					background: rgba(224, 216, 124, 0.9) !important;
+					border: 1px solid rgba(21, 6, 148, 0.9) !important;
+					border-radius: 13px;
+					width: 450px;
+					height: 45px;
+					}
+					
+					.buttonsindhi {
+					background: #fff !important;
+					border: 1px solid rgba(21, 6, 148, 0.9) !important;
+					border-radius: 13px;
+					width: 66px;
+					height: 65px;
+					}
+					.buttonsindhi:hover{
+					background: rgba(224, 216, 124, 0.9) !important;
+					}
+					.buttonsecondline {
+					background: rgba(224, 216, 124, 0.9) !important;
+					border: 1px solid rgba(21, 6, 148, 0.9) !important;
+					border-radius: 13px;
+					width: 65px;
+					height: 90px;
+					}
+					
+					.spansindhi {
+					}
+					
+					.spansindhi2 {
+					font-size: 16px;
+					<!-- font-weight: bold; -->
+					}
+				</style>
+				
+				<!-- read the instructions -->
+				
+				<style>
+					.hightlightcontact {
+					border: 1px solid #ccc;
+					border-radius: 5px;
+					color: white;
+					/*display: block;*/
+					font-size: 100%;
+					font-style: normal;
+					padding: 3px 5px;
+					text-align: center;
+					text-decoration: none;
+					background: white;
+					width: auto;
+					position: fixed;
+					z-index: 1;
+					bottom:490px;
+					left:0px;
+					font-weight:bold;
+					background:green;
+					}
+					.hightlightcontact:hover{
+					color:white;
+					}
+				</style>
+				<a href="#" class="hightlightcontact" target="_blank">Read the Instruction</a>
+				
+				<div class="row text-center">
+					
+					<!-- line 1 -->
+					<div class="col-md-12" style="margin-top:15px;">
+						<button type="button" id="btn1" onclick="btn1()" class="text-center buttonsindhi" tabindex="10">
+							<span class="spansindhi btn1_a">۰</span>
+							<br><span style="color:blue; font-weight:bold">०&nbsp;&nbsp;</span>
+							<span class="btn1_c">0</span>
+						</button>
+						<button type="button" id="btn2" onclick="btn2()" class="text-center buttonsindhi" tabindex="1">
+							<span class="spansindhi btn2_a">۱</span>
+							<br><span style="color:blue; font-weight:bold">१ &nbsp;</span>
+							<span class="btn2_c">1</span>
+						</button>
+						<button type="button" onclick="btn3()" id="btn3" class="text-center buttonsindhi" tabindex="2">
+							<span class="spansindhi btn3_a" style="color:black; font-weight:600">۲</span>
+							<br><span style="color:blue; font-weight:bold">२ &nbsp;</span>
+							<span class="btn3_c">2</span>
+						</button>
+						<button type="button" onclick="btn4()" id="btn4" class="text-center buttonsindhi" tabindex="3">
+							<span class="spansindhi btn4_a" style="color:black; font-weight:600">۳</span>
+							<br><span style="color:blue; font-weight:bold">३ &nbsp;</span>
+							<span class="btn4_c">3</span>
+						</button>
+						<button type="button" onclick="btn5()" id="btn5" class="text-center buttonsindhi" tabindex="4">
+							<span class="spansindhi btn5_a" style="color:black; font-weight:600">۴</span>
+							<br><span style="color:blue; font-weight:bold">४ &nbsp;</span>
+							<span class="btn5_c">4</span>
+						</button>
+						<button type="button" onclick="btn6()" id="btn6" class="text-center buttonsindhi" tabindex="5">
+							<span class="spansindhi btn6_a" style="color:black; font-weight:600">۵</span>
+							<br><span style="color:blue; font-weight:bold">५&nbsp;</span>
+							<span class="btn6_c">5</span>
+						</button>
+						<button type="button" onclick="btn7()" id="btn7" class="text-center buttonsindhi" tabindex="6">
+							<span class="spansindhi btn7_a" style="color:black; font-weight:600">٦</span>
+							<br><span style="color:blue; font-weight:bold">६&nbsp;</span>
+							<span class="btn7_c">6</span>
+						</button>
+						<button type="button" onclick="btn8()" id="btn8" class="text-center buttonsindhi" tabindex="7">
+							<span class="spansindhi btn8_a" style="color:black; font-weight:600">۷</span>
+							<br><span style="color:blue; font-weight:bold">७&nbsp;</span><span class="btn8_c">7</span>
+						</button>
+						<button type="button" onclick="btn9()" id="btn9" class="text-center buttonsindhi" tabindex="8">
+							<span class="spansindhi btn9_a" style="color:black; font-weight:600">۸</span>
+							<br><span style="color:blue; font-weight:bold">८&nbsp;</span>
+							<span class="btn9_c">8</span>
+						</button>
+						<button type="button" onclick="btn10()" id="btn10" class="text-center buttonsindhi" tabindex="9">
+							<span class="spansindhi btn10_a" style="color:black; font-weight:600">۹</span>
+							<br><span style="color:blue; font-weight:bold">९&nbsp;</span>
+							<span class="btn10_c">9</span>
+						</button>
+						<button type="button" onclick="btn11()" id="btn11" class="text-center buttonsindhi" tabindex="11">
+							<span class="spansindhi btn11_a">I</span>
+							<br>
+							<span style="color:black; font-weight:600">ي</span>&nbsp;&nbsp;<span style="color:blue">इ</span>
+						</button>
+						<button type="button" onclick="btn12()" id="btn12" class="text-center buttonsindhi" tabindex="12">
+							<span class="spansindhi btn12_a">O</span>
+							<br><span style="color:black; font-weight:600">و</span>&nbsp;&nbsp;<span style="color:blue" id="span12">व</span>
+						</button>
+						<button type="button" onclick="btn13()" id="btn13" class="text-center buttonsindhi" tabindex="13">
+							<span class="spansindhi btn13_a">U</span>
+							<br><span class="btn13_sindhi" style="color:black; font-weight:600">يو</span>&nbsp;&nbsp;<span style="color:blue" id="span13">यू</span>
+						</button>
+						<button type="button" onclick="btn14()" id="btn14" class="text-center buttonsindhi" tabindex="14">
+							<span class="spansindhi btn14_a">C</span>
+							<br><span style="color:blue" id="span14">स क</span><span style="color:red"> sk</span>
+						</button>
+						<button type="button" onclick="btn15()" id="btn15" class="text-center buttonsindhi" tabindex="15">
+							<span class="spansindhi btn15_a">W</span>
+							<br><span class="btn15_sindhi" style="color:black; font-weight:600">و</span>&nbsp;&nbsp;<span style="color:blue" id="span15">व</span>
+						</button>
+					</div>
+					
+					<!-- line 2 -->
+					<div class="col-md-12" id="line2div" style="display:block;">
+						<button type="button" onclick="btn16()" id="btn16" class="text-center buttonsindhi" tabindex="31">
+							<span class="btn16_a" id="span_a_16">!</span>
+							<br><span class="btn16_b" title="Semicolon">;</span>
+						</button>
+						<button type="button" onclick="btn17()" id="btn17" class="text-center buttonsindhi" tabindex="32">
+							<span class="btn17_a" id="span_a_17">@</span>
+							<br><span class="btn17_b">\</span>
+						</button>
+						<button type="button" onclick="btn18()" id="btn18" class="text-center buttonsindhi" tabindex="33">
+							<span class="btn18_a" id="span_a_18">#</span>
+							<br><span class="btn18_b">/</span>
+						</button>
+						<button type="button" onclick="btn19()" id="btn19" class="text-center buttonsindhi" tabindex="34">
+							<span class="btn19_a" id="span_a_19">₹</span>
+							<br><span class="btn19_b">$</span>
+						</button>
+						<button type="button" onclick="btn20()" id="btn20" class="text-center buttonsindhi" tabindex="35">
+							<span class="btn20_a" id="span_a_20">%</span>
+							<br><span class="btn20_b">&lt;</span>
+						</button>
+						<button type="button" onclick="btn21()" id="btn21" class="text-center buttonsindhi" tabindex="36">
+							<span class="btn21_a" id="span_a_21">^</span>
+							<br><span class="btn21_b">&gt;</span>
+						</button>
+						<button type="button" onclick="btn22()" id="btn22" class="text-center buttonsindhi" tabindex="37">
+							<span class="btn22_a" id="span_a_22">ੴ</span>
+							<br><span class="btn22_b">ॐ</span>
+						</button>
+						<button type="button" onclick="btn23()" id="btn23" class="text-center buttonsindhi" tabindex="38">
+							<span class="btn23_a" id="span_a_23">*</span>
+							<br><span class="btn23_b" title="Comma">,</span>
+						</button>
+						<button type="button" onclick="btn24()" id="btn24" class="text-center buttonsindhi" tabindex="39">
+							<span class="btn24_a" id="span_a_24">(</span>
+							<br><strong class="btn24_b" title="Tatweel/ Kashida to extend a word.">ـ</strong>
+						</button>
+						<button type="button" onclick="btn25()" id="btn25" class="text-center buttonsindhi" tabindex="40">
+							<span class="btn25_a" id="span_a_25">)</span>
+							<br><strong class="btn25_b" title="Sindhi Semicolon">؛</strong>
+						</button>
+						<button type="button" onclick="btn26()" id="btn26" class="text-center buttonsindhi" tabindex="41">
+							<span class="btn26_a" title="Underscore" id="span_a_26">_</span>
+							<br><span class="btn26_b" title="Fullstop">.</span>
+						</button>
+						<button type="button" onclick="btn27()" id="btn27" class="text-center buttonsindhi" tabindex="42">
+							<span class="btn27_a" title="Single quote" id="span_a_27">'</span>
+							<br><span class="btn27_b" title="Ampersand (And)">&</span>
+							</button>
+							<button type="button" onclick="btn28()" id="btn28" class="text-center buttonsindhi" tabindex="44">
+								<span class="btn28_a" title="Minus" id="span_a_28">-</span>
+								<br><span class="btn28_b" title="Plus" >+</span>
+							</button>
+							<button type="button" onclick="btn29()" id="btn29" class="text-center buttonsindhi" tabindex="45">
+								<span class="btn29_a" title="Question mark" id="span_a_29">?</span>
+								<br><span class="btn29_b" title="Sindhi Question mark" >؟</span>
+							</button>
+							<button type="button" onclick="btn30()" id="btn30" class="text-center buttonsindhi" tabindex="119">
+								<span class="btn30_a" title="Mein" id="span_a_30">۾</span>
+								<br><span class="btn30_b" title="Sindhi sound /u/"> ُ</span>
+							</button>
+						</div>
+						
+						<!-- line 02 -->
+						<div class="col-md-12" id="line02div" style="display:none;">
+							<button type="button" onclick="btn016()" id="btn016" class="text-center buttonsindhi" tabindex="31">
+								<span class="btn16_a" title="Semicolon">;</span>
+								<br><span class="btn16_b">!</span>
+							</button>
+							<button type="button" onclick="btn017()" id="btn017" class="text-center buttonsindhi" tabindex="32">
+								<span class="btn17_a">\</span>
+								<br><span class="btn17_b">@</span>
+							</button>
+							<button type="button" onclick="btn018()" id="btn018" class="text-center buttonsindhi" tabindex="33">
+								<span class="btn18_a">/</span>
+								<br><span class="btn18_b">#</span>
+							</button>
+							<button type="button" onclick="btn019()" id="btn019" class="text-center buttonsindhi" tabindex="34">
+								<span class="btn19_a">$</span>
+								<br><span class="btn19_b">₹</span>
+							</button>
+							<button type="button" onclick="btn020()" id="btn020" class="text-center buttonsindhi" tabindex="35">
+								<span class="btn20_a">&lt;</span>
+								<br><span class="btn20_b">%</span>
+							</button>
+							<button type="button" onclick="btn021()" id="btn021" class="text-center buttonsindhi" tabindex="36">
+								<span class="btn21_a">&gt;</span>
+								<br><span class="btn21_b">^</span>
+							</button>
+							<button type="button" onclick="btn022()" id="btn022" class="text-center buttonsindhi" tabindex="37">
+								<span class="btn22_a">ॐ</span>
+								<br><span class="btn22_b">ੴ</span>
+							</button>
+							<button type="button" onclick="btn023()" id="btn023" class="text-center buttonsindhi" tabindex="38">
+								<span class="btn23_a" title="Comma">,</span>
+								<br><span class="btn23_b">*</span>
+							</button>
+							<button type="button" onclick="btn024()" id="btn024" class="text-center buttonsindhi" tabindex="39">
+								<strong class="btn24_a" title="Tatweel/ Kashida to extend a word.">ـ</strong>
+								<br><span class="btn24_b">(</span>
+							</button>
+							<button type="button" onclick="btn025()" id="btn025" class="text-center buttonsindhi" tabindex="40">
+								<strong class="btn25_a" title="Sindhi Semicolon">؛</strong>
+								<br><span class="btn25_b">)</span>
+							</button>
+							<button type="button" onclick="btn026()" id="btn026" class="text-center buttonsindhi" tabindex="41">
+								<span class="btn26_a" title="Fullstop">.</span>
+								<br><span class="btn26_b" title="Underscore">_</span>
+							</button>
+							<button type="button" onclick="btn027()" id="btn027" class="text-center buttonsindhi" tabindex="42">
+								<span class="btn27_a" title="Ampersand (And)">&</span>
+									<br><span class="btn27_b" title="Single quote">,</span>
+								</button>
+								<button type="button" onclick="btn028()" id="btn028" class="text-center buttonsindhi" tabindex="44">
+									<span class="btn28_a" title="Plus">+</span>
+									<br><span class="btn28_b" title="Minus">-</span>
+								</button>
+								<button type="button" onclick="btn029()" id="btn029" class="text-center buttonsindhi" tabindex="45">
+									<span class="btn29_a" title="Sindhi Question mark">؟</span>
+									<br><span class="btn29_b" title="Question Mark">?</span>
+								</button>
+								<button type="button" onclick="btn030()" title="Sindhi sound /u/" id="btn030" class="text-center buttonsindhi" tabindex="119">
+									<span class="btn30_a"> ُ</span>
+									<br><span class="btn30_b">۾</span>
+								</button>
+							</div>
+							
+							<!-- line 3 -->
+							<div class="col-md-12" id="line3div">
+								<button type="button" onclick="btn31()" id="btn31" class="text-center buttonsindhi" tabindex="16">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span31">अ</span>
+									<br><span style="font-weight:bold; color:red">X</span>
+								</button>
+								<button type="button" onclick="btn32()" id="btn32" class="text-center buttonsindhi" tabindex="17">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span32">आ</span>
+									<br><span style="font-weight:bold">ा</span>
+								</button>
+								<button type="button" onclick="btn33()" id="btn33" class="text-center buttonsindhi" tabindex="18">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span33">इ</span>
+									<br><span style="font-weight:bold">ि</span>
+								</button>
+								<button type="button" onclick="btn34()" id="btn34" class="text-center buttonsindhi" tabindex="19">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span34">ई</span>
+									<br><span style="font-weight:bold">ी</span>
+								</button>
+								<button type="button" onclick="btn35()" id="btn35" class="text-center buttonsindhi" tabindex="20">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span35">उ</span>
+									<br><span style="font-weight:bold">ु</span>
+								</button>
+								<button type="button" onclick="btn36()" id="btn36" class="text-center buttonsindhi" tabindex="21">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span36">ऊ</span>
+									<br><span style="font-weight:bold">ू</span>
+								</button>
+								<button type="button" onclick="btn37()" id="btn37" class="text-center buttonsindhi" tabindex="22">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span37">ए</span>
+									<br><span style="font-weight:bold">े</span>
+								</button>
+								<button type="button" onclick="btn38()" id="btn38" class="text-center buttonsindhi" tabindex="23">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span38">एै</span>
+									<br><span style="font-weight:bold">ै</span>
+								</button>
+								<button type="button" onclick="btn39()" id="btn39" class="text-center buttonsindhi" tabindex="24">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span39">ऍ</span>
+									<br><span style="font-weight:bold">ॅ</span>
+								</button>
+								<button type="button" onclick="btn40()" id="btn40" class="text-center buttonsindhi" tabindex="25">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span40">ओ</span>
+									<br><span style="font-weight:bold">ो</span>
+								</button>
+								<button type="button" onclick="btn41()" id="btn41" class="text-center buttonsindhi" tabindex="26">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span41">औ</span>
+									<br><span style="font-weight:bold">ौ</span>
+								</button>
+								<button type="button" onclick="btn42()" id="btn42" class="text-center buttonsindhi" tabindex="27">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span42">अं</span>
+									<br><span style="font-weight:bold" title="Hindi 'An' matra">ं</span>
+								</button>
+								<button type="button" onclick="btn43()" id="btn43" class="text-center buttonsindhi" tabindex="29">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span43" title="Short  ऋ  vowel as in पृ">ऋ</span>
+									<br><span style="font-weight:bold">ृ</span>
+								</button>
+								<button type="button" onclick="btn44()" id="btn44" class="text-center buttonsindhi" tabindex="30">
+									<span class="spansindhi" style="color:blue; font-weight:bold" id="span44" title="Visarga">ः</span>
+									<br><span style="font-weight:bold" title="Nukta">़</span>
+								</button>
+								<button type="button" onclick="btn45()" id="btn45" class="text-center buttonsindhi" tabindex="28">
+									<span class="spansindhi" style="color:blue; font-weight:bold"  id="span45">ष</span>
+									<br><span style="font-weight:bold" title="Virama/ Halant to half the consonant">् र</span>
+								</button>
+							</div>
+							
+							<!-- line 03 -->
+							<div class="col-md-12" id="line03div" style="display:none">
+								<button type="button" onclick="btn031()" id="btn031" class="text-center buttonsindhi" tabindex="16">
+									<span class="spansindhi" style="color:red; font-weight:400">X</span>
+									<br><span style="font-weight:bold" id="span031">अ</span>
+								</button>
+								<button type="button" onclick="btn032()" id="btn032" class="text-center buttonsindhi" tabindex="17">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ा</span>
+									<br><span style="font-weight:bold" id="span032">आ</span>
+								</button>
+								<button type="button" onclick="btn033()" id="btn033" class="text-center buttonsindhi" tabindex="18">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ि</span>
+									<br><span style="font-weight:bold" id="span033">इ</span>
+								</button>
+								<button type="button" onclick="btn034()" id="btn034" class="text-center buttonsindhi" tabindex="19">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ी</span>
+									<br><span style="font-weight:bold" id="span034">ई</span>
+								</button>
+								<button type="button" onclick="btn035()" id="btn035" class="text-center buttonsindhi" tabindex="20">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ु</span>
+									<br><span style="font-weight:bold" id="span035">उ</span>
+								</button>
+								<button type="button" onclick="btn036()" id="btn036" class="text-center buttonsindhi" tabindex="21">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ू</span>
+									<br><span style="font-weight:bold" id="span036">ऊ</span>
+								</button>
+								<button type="button" onclick="btn037()" id="btn037" class="text-center buttonsindhi" tabindex="22">
+									<span class="spansindhi" style="color:blue; font-weight:bold">े</span>
+									<br><span style="font-weight:bold" id="span037">ए</span>
+								</button>
+								<button type="button" onclick="btn038()" id="btn038" class="text-center buttonsindhi" tabindex="23">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ै</span>
+									<br><span style="font-weight:bold" id="span038">एै</span>
+								</button>
+								<button type="button" onclick="btn039()" id="btn039" class="text-center buttonsindhi" tabindex="24">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ॅ</span>
+									<br><span style="font-weight:bold" id="span039">ऍ</span>
+								</button>
+								<button type="button" onclick="btn040()" id="btn040" class="text-center buttonsindhi" tabindex="25">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ो</span>
+									<br><span style="font-weight:bold" id="span040">ओ</span>
+								</button>
+								<button type="button" onclick="btn041()" id="btn041" class="text-center buttonsindhi" tabindex="26">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ौ</span>
+									<br><span style="font-weight:bold" id="span041">औ</span>
+								</button>
+								<button type="button" onclick="btn042()" id="btn042" class="text-center buttonsindhi" tabindex="27">
+									<span class="spansindhi" style="color:blue; font-weight:bold" title="Hindi 'An' matra">ं</span>
+									<br><span style="font-weight:bold" id="span042">अं</span>
+								</button>
+								<button type="button" onclick="btn043()" id="btn043" class="text-center buttonsindhi" tabindex="29">
+									<span class="spansindhi" style="color:blue; font-weight:bold">ृ</span>
+									<br><span style="font-weight:bold" id="span043" title="Short  ऋ  vowel as in पृ">ऋ</span>
+								</button>
+								<button type="button" onclick="btn044()" id="btn044" class="text-center buttonsindhi" tabindex="30">
+									<span class="spansindhi" style="color:blue; font-weight:bold" title="Nukta">़</span>
+									<br><span style="font-weight:bold" id="span044" title="Visarga">ः</span>
+								</button>
+								<button type="button" onclick="btn045()" id="btn045" class="text-center buttonsindhi" tabindex="28">
+									<span class="spansindhi" style="color:blue; font-weight:bold" title="Virama/ Halant to half the consonant">् र</span>
+									<br><span style="font-weight:bold" id="span045">ष</span>
+								</button>
+							</div>
+							
+							
+							<!-- line 4 -->
+							<div class="col-md-12">
+								<button type="button" onclick="btn46()" id="btn46" class="text-center buttonsindhi" tabindex="61">
+									<span class="spansindhi btn46_a">جھ</span>
+									<br><span class="btn46_b" id="span46">झ</span>&nbsp;<span class="btn46_c">JH</span>
+								</button>
+								<button type="button" onclick="btn47()" id="btn47" class="text-center buttonsindhi" tabindex="62">
+									<span class="spansindhi btn47_a">ڄ</span>
+									<br><span class="btn47_b" id="span47">ज॒</span>&nbsp;<span class="btn47_c">j`</span>
+								</button>
+								<button type="button" onclick="btn48()" id="btn48" class="text-center buttonsindhi" tabindex="63">
+									<span class="spansindhi btn48_a">ج</span>
+									<br><span class="btn48_b" id="span48">ज</span>&nbsp;<span class="btn48_c">J</span>
+								</button>
+								<button type="button" onclick="btn49()" id="btn49" class="text-center buttonsindhi" tabindex="64">
+									<span class="spansindhi btn49_a">ث</span>
+									<br><span class="btn49_b" id="span49">सह</span>&nbsp;<span class="btn49_c">S'h</span>
+								</button>
+								<button type="button" onclick="btn50()" id="btn50" class="text-center buttonsindhi" tabindex="65">
+									<span class="spansindhi btn50_a">ٺ</span>
+									<br><span class="btn50_b" id="span50" id="span50">ठ</span>&nbsp;
+									<span class="btn50_c">TH</span>
+								</button>
+								<button type="button" onclick="btn51()" id="btn51" class="text-center buttonsindhi" tabindex="66">
+									<span class="spansindhi btn51_a">ٽ</span>
+									<br><span class="btn51_b" id="span51" id="span51">ट</span>&nbsp;
+									<span class="btn51_c">T</span>
+								</button>
+								<button type="button" onclick="btn52()" id="btn52" class="text-center buttonsindhi" tabindex="67">
+									<span class="spansindhi btn52_a">ٿ</span>
+									<br><span class="btn52_b" id="span52" id="span52">थ</span>&nbsp;
+									<span class="btn52_c">TH</span>
+								</button>
+								<button type="button" onclick="btn53()" id="btn53" class="text-center buttonsindhi" tabindex="68">
+									<span class="spansindhi btn53_a">ت</span>
+									<br><span class="btn53_b" id="span53" id="span53">त</span>&nbsp;
+									<span class="btn53_c">T</span>
+								</button>
+								<button type="button" onclick="btn54()" id="btn54" class="text-center buttonsindhi" tabindex="69">
+									<span class="spansindhi btn54_a">ڀ</span>
+									<br><span class="btn54_b" id="span54" id="span54">भ</span>&nbsp;
+									<span class="btn54_c">BH</span>
+								</button>
+								<button type="button" onclick="btn55()" id="btn55" class="text-center buttonsindhi" tabindex="70">
+									<span class="spansindhi btn55_a">پ</span>
+									<br><span class="btn55_b" id="span55" id="span55">प</span>&nbsp;
+									<span class="btn55_c">P</span>
+								</button>
+								<button type="button" onclick="btn56()" id="btn56" class="text-center buttonsindhi" tabindex="71">
+									<span class="spansindhi btn56_a">ٻ</span>
+									<br><span class="btn56_b" id="span56">ब॒</span>&nbsp;
+									<span class="btn56_c">B^</span>
+								</button>
+								<button type="button" onclick="btn57()" id="btn57" class="text-center buttonsindhi" tabindex="72">
+									<span class="spansindhi btn57_a">ب</span>
+									<br><span class="btn57_b" id="span57" id="span57">ब</span>&nbsp;
+									<span class="btn57_c">B</span>
+								</button>
+								<button type="button" onclick="btn58()" id="btn58" class="text-center buttonsindhi" tabindex="73">
+									<span class="spansindhi btn58_a" title="In Hindi पूर्ण विराम (|) (Full Stop) & In Sindhi, It is the first letter.">ا</span>
+									<br><span class="btn58_b" id="span58">अ</span>&nbsp;
+									<span class="btn58_c">A</span>
+								</button>
+								<button type="button" onclick="btn59()" id="btn59" class="text-center buttonsindhi" tabindex="74">
+									<span class="spansindhi btn59_a">ء</span>
+									<br><span class="btn59_b" id="span59">ज्ञ</span>&nbsp;
+									<span class="btn59_c">Gy</span>
+								</button>
+								<button type="button" onclick="btn60()" id="btn60" class="text-center buttonsindhi" tabindex="75">
+									<span class="spansindhi btn60_a">۽</span>
+									<br><span class="btn60_b" id="span60">क्ष</span>&nbsp;
+									<span class="btn60_c">kS</span>
+								</button>
+							</div>
+							
+							<!-- line 5 -->
+							<div class="col-md-12">
+								<button type="button" onclick="btn61()" id="btn61" class="text-center buttonsindhi" tabindex="76">
+									<span class="spansindhi btn61_a">ڙ</span>
+									<br><span class="btn61_b" id="span61">ड़</span>&nbsp;<span class="btn61_c">RH</span>
+								</button>
+								<button type="button" onclick="btn62()" id="btn62" class="text-center buttonsindhi" tabindex="77">
+									<span class="spansindhi btn62_a">ر</span>
+									<br><span class="btn62_b" id="span62">र</span>&nbsp;<span class="btn62_c">R</span>
+								</button>
+								<button type="button" onclick="btn63()" id="btn63" class="text-center buttonsindhi" tabindex="78">
+									<span class="spansindhi btn63_a">ذ</span>
+									<br><span class="btn63_b" id="span63">ज़</span>&nbsp;<span class="btn63_c">DZ</span>
+								</button>
+								<button type="button" onclick="btn64()" id="btn64" class="text-center buttonsindhi" tabindex="79">
+									<span class="spansindhi btn64_a">ڍ</span>
+									<br><span class="btn64_b" id="span64">ढ</span>&nbsp;<span class="btn64_c">DH</span>
+								</button>
+								<button type="button" onclick="btn65()" id="btn65" class="text-center buttonsindhi" tabindex="80">
+									<span class="spansindhi btn65_a">ڊ</span>
+									<br><span class="btn65_b" id="span65">डह</span>&nbsp;<span class="btn65_c">tD</span>
+								</button>
+								<button type="button" onclick="btn66()" id="btn66" class="text-center buttonsindhi" tabindex="81">
+									<span class="spansindhi btn66_a">ڏ</span>
+									<br><span class="btn66_b" id="span66">ड॒</span>&nbsp;<span class="btn66_c">D^</span>
+								</button>
+								<button type="button" onclick="btn67()" id="btn67" class="text-center buttonsindhi" tabindex="82">
+									<span class="spansindhi btn67_a">ڌ</span>
+									<br><span class="btn67_b" id="span67">ध</span>&nbsp;<span class="btn67_c">DH</span>
+								</button>
+								<button type="button" onclick="btn68()" id="btn68" class="text-center buttonsindhi" tabindex="83">
+									<span class="spansindhi btn68_a">د</span>
+									<br><span class="btn68_b" id="span68">द</span>&nbsp;<span class="btn68_c">D</span>
+								</button>
+								<button type="button" onclick="btn69()" id="btn69" class="text-center buttonsindhi" tabindex="84">
+									<span class="spansindhi btn69_a">خ</span>
+									<br><span class="btn69_b" id="span69">ख</span>&nbsp;<span class="btn69_c">KH</span>
+								</button>
+								<button type="button" onclick="btn70()" id="btn70" class="text-center buttonsindhi" tabindex="85">
+									<span class="spansindhi btn70_a">ح</span>
+									<br><span class="btn70_b" id="span70">ह</span>&nbsp;<span class="btn70_c">H</span>
+								</button>
+								<button type="button" onclick="btn71()" id="btn71" class="text-center buttonsindhi" tabindex="86">
+									<span class="spansindhi btn71_a">ڇ</span>
+									<br><span class="btn71_b" id="span71">छ</span>&nbsp;<span class="btn71_c">CH</span>
+								</button>
+								<button type="button" onclick="btn72()" id="btn72" class="text-center buttonsindhi" tabindex="87">
+									<span class="spansindhi btn72_a">چ</span>
+									<br><span class="btn72_b" id="span72">च</span>&nbsp;<span class="btn72_c">Ch</span>
+								</button>
+								<button type="button" onclick="btn73()" id="btn73" class="text-center buttonsindhi" tabindex="88">
+									<span class="spansindhi btn73_a">ڃ</span>
+									<br><span class="btn73_b" id="span73">ञ</span>&nbsp;<span class="btn73_c">JJ</span>
+								</button>
+								<button type="button" onclick="setshiftkeywords()" id="btn74" class="text-center buttonsindhi" tabindex="89">
+									<span class="spansindhi btn74_a"><br /></span>
+									<br><span class="btn74_b" id="spanshift">Shift</span>
+								</button>
+								<button type="button" onclick="btn75()" id="btn75" class="text-center buttonsindhi" tabindex="89">
+									<span class="spansindhi btn75_a"><br /></span>
+									<br><span  class="btn75_b">Dlt</span>
+								</button>
+							</div>
+							
+							<!-- line 6 -->
+							<div class="col-md-12">
+								<button type="button" onclick="btn76()" id="btn76" class="text-center buttonsindhi" tabindex="91">
+									<span class="spansindhi btn76_a">ڪ</span>
+									<br><span class="btn76_b" id="span76">क</span>&nbsp;<span class="btn76_c">K</span>
+								</button>
+								<button type="button" onclick="btn77()" id="btn77" class="text-center buttonsindhi" tabindex="92">
+									<span class="spansindhi btn77_a">ق</span>
+									<br><span class="btn77_b" id="span77">क़</span>&nbsp;<span class="btn77_c">Q'</span>
+								</button>
+								<button type="button" onclick="btn78()" id="btn78" class="text-center buttonsindhi" tabindex="93">
+									<span class="spansindhi btn78_a">ڦ</span>
+									<br><span class="btn78_b" id="span78">फ</span>&nbsp;<span class="btn78_c">FH</span>
+								</button>
+								<button type="button" onclick="btn79()" id="btn79" class="text-center buttonsindhi" tabindex="94">
+									<span class="spansindhi btn79_a">ف</span>
+									<br><span class="btn79_b" id="span79">फ़</span>&nbsp;<span class="btn79_c">F</span>
+								</button>
+								<button type="button" onclick="btn80()" id="btn80" class="text-center buttonsindhi" tabindex="95">
+									<span class="spansindhi btn80_a">غ</span>
+									<br><span class="btn80_b" id="span80">ग</span>&nbsp;<span class="btn80_c">GH</span>
+								</button>
+								<button type="button" onclick="btn81()" id="btn81" class="text-center buttonsindhi" tabindex="96">
+									<span class="spansindhi btn81_a">ع</span>
+									<br><span class="btn81_b" id="span81">अ</span>&nbsp;<span class="btn81_c">AH</span>
+								</button>
+								<button type="button" onclick="btn82()" id="btn82" class="text-center buttonsindhi" tabindex="97">
+									<span class="spansindhi btn82_a">ظ</span>
+									<br><span class="btn82_b" id="span82">ज़</span>&nbsp;<span class="btn82_c">ZJH</span>
+								</button>
+								<button type="button" onclick="btn83()" id="btn83" class="text-center buttonsindhi" tabindex="98">
+									<span class="spansindhi btn83_a">ط</span>
+									<br><span class="btn83_b" id="span83">त</span>&nbsp;<span class="btn83_c">T'a</span>
+								</button>
+								<button type="button" onclick="btn84()" id="btn84" class="text-center buttonsindhi" tabindex="99">
+									<span class="spansindhi btn84_a">ض</span>
+									<br><span class="btn84_b" id="span84">ज़</span>&nbsp;<span class="btn84_c">ZJH</span>
+								</button>
+								<button type="button" onclick="btn85()" id="btn85" class="text-center buttonsindhi" tabindex="100">
+									<span class="spansindhi btn85_a">ص</span>
+									<br><span class="btn85_b" id="span85">स</span>&nbsp;<span class="btn85_c">SS</span>
+								</button>
+								<button type="button" onclick="btn86()" id="btn86" class="text-center buttonsindhi" tabindex="101">
+									<span class="spansindhi btn86_a">ش</span>
+									<br><span class="btn86_b" id="span86">श</span>&nbsp;<span class="btn86_c">SH</span>
+								</button>
+								<button type="button" onclick="btn87()" id="btn87" class="text-center buttonsindhi" tabindex="102">
+									<span class="spansindhi btn87_a">س</span>
+									<br><span class="btn87_b" id="span87">स</span>&nbsp;<span class="btn87_c">S</span>
+								</button>
+								<button type="button" onclick="btn88()" id="btn88" class="text-center buttonsindhi" tabindex="103">
+									<span class="spansindhi btn88_a">ز</span>
+									<br><span class="btn88_b" id="span88">ज़</span>&nbsp;<span class="btn88_c">Z</span>
+								</button>
+								<button type="button" onclick="eshiftkey()" id="btn89" class="text-center buttonsindhi" tabindex="105">
+									<span class="spansindhi btn89_a"><br /></span>
+									<br><span class="btn89_b">Ctrl</span>
+								</button>
+								<button type="button" onclick="sethalfhindi()" id="btn90" class="text-center buttonsindhi" tabindex="104">
+									<span class="spansindhi btn90_a"><br /></span>
+									<br><span class="btn90_b" id="spanalt">Alt</span>
+								</button>
+							</div>
+							
+							<!-- line 7 -->
+							<div class="col-md-12">
+								<button type="button" onclick="btn91()" id="btn91" class="text-center buttonsindhi" tabindex="106">
+									<span class="spansindhi btn91_a">ي</span>
+									<br><span class="btn91_b" id="span91">य</span>&nbsp;<span class="btn91_c">E</span>
+								</button>
+								<button type="button" onclick="btn92()" id="btn92" class="text-center buttonsindhi" tabindex="107">
+									<span class="spansindhi btn92_a">ي</span>
+									<br><span class="btn92_b" id="span92">य</span>&nbsp;<span class="btn92_c">Y</span>
+								</button>
+								<button type="button" onclick="btn93()" id="btn93" class="text-center buttonsindhi" tabindex="108">
+									<span class="spansindhi btn93_a">ھ</span>
+									<br><span class="btn93_b" id="span93">ह</span>&nbsp;<span class="btn93_c">H</span>
+								</button>
+								<button type="button" onclick="btn94()" id="btn94" class="text-center buttonsindhi" tabindex="109">
+									<span class="spansindhi btn94_a">و</span>
+									<br><span class="btn94_b" id="span94">व</span>&nbsp;<span class="btn94_c">V</span>
+								</button>
+								<button type="button" onclick="btn95()" id="btn95" class="text-center buttonsindhi" tabindex="110">
+									<span class="spansindhi btn95_a">ڻ</span>
+									<br><span class="btn95_b" id="span95">ण</span>&nbsp;<span class="btn95_c">R’nh</span>
+								</button>
+								<button type="button" onclick="btn96()" id="btn96" class="text-center buttonsindhi" tabindex="111">
+									<span class="spansindhi btn96_a">ن</span>
+									<br><span class="btn96_b" id="span96">न</span>&nbsp;<span class="btn96_c">N</span>
+								</button>
+								<button type="button" onclick="btn97()" id="btn97" class="text-center buttonsindhi" tabindex="112">
+									<span class="spansindhi btn97_a">م</span>
+									<br><span class="btn97_b" id="span97">म</span>&nbsp;<span class="btn97_c">M</span>
+								</button>
+								<button type="button" onclick="btn98()" id="btn98" class="text-center buttonsindhi" tabindex="113">
+									<span class="spansindhi btn98_a">ل</span>
+									<br><span class="btn98_b" id="span98">ल</span>&nbsp;<span class="btn98_c">L</span>
+								</button>
+								<button type="button" onclick="btn99()" id="btn99" class="text-center buttonsindhi" tabindex="114">
+									<span class="spansindhi btn99_a">گھ</span>
+									<br><span class="btn99_b" id="span99">ग</span>&nbsp;<span class="btn99_c">Gh’</span>
+								</button>
+								<button type="button" onclick="btn100()" id="btn100" class="text-center buttonsindhi"
+								tabindex="115">
+									<span class="spansindhi btn100_a">ڱ</span>
+									<br><span class="btn100_b" id="span100">घ</span>&nbsp;<span class="btn100_c">G’nh</span>
+								</button>
+								<button type="button" onclick="btn101()" id="btn101" class="text-center buttonsindhi"
+								tabindex="116">
+									<span class="spansindhi btn101_a">ڳ</span>
+									<br><span class="btn101_b" id="span101">ग</span>&nbsp;<span class="btn101_c">Gh’</span>
+								</button>
+								<button type="button" onclick="btn102()" id="btn102" class="text-center buttonsindhi"
+								tabindex="117">
+									<span class="spansindhi btn102_a">گ</span>
+									<br><span class="btn102_b" id="span102">ग</span>&nbsp;<span class="btn102_c">G</span>
+								</button>
+								<button type="button" title="working" onclick="btn103()" id="btn103" class="text-center buttonsindhi" tabindex="118">
+									<span class="spansindhi btn103_a">ک</span>
+									<br><span class="btn103_b" id="span103">ख</span>&nbsp;<span class="btn103_c">KH</span>
+								</button>
+								<button type="button" onclick="btn104()" id="btn104" class="text-center buttonsindhi" tabindex="90">
+									<span class="spansindhi btn104_a"><br /></span>
+									<br><span class="btn104_b">Space</span>
+								</button>
+								<button type="button" onclick="btn105()" id="btn105" class="text-center buttonsindhi" tabindex="120">
+									<span class="spansindhi btn105_a"><br /></span>
+									<br><span class="btn105_b">Enter</span>
+								</button>
+							</div>
+							
+							
+							<div class="col-lg-12">
+								<p class="text-center"><span id="altstatus" style="display:none"><strong>Alt</strong> is Active</span><span id="shiftstatus" style="display:none"><strong>Shift</strong> is Active</span></p>
+							</div>
+							
+						</div>
+					</div>
+					<!--</form>-->
+				</div>
+				<!-- /.container -->
+				<br /><br />
+				
+				
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="myModalLabel">Saved Text to Speech</h4>
+							</div>
+							<div class="modal-body">
+								<ul id="notes">
+									<li>
+										<p class="no-notes">You don't have any notes.</p>
+									</li>
+								</ul>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<script>
+					function eshiftkey() {
+						var x = document.getElementById("line2div");
+						var y = document.getElementById("line02div");
+						var a = document.getElementById("line3div");
+						var b = document.getElementById("line03div");
+						
+						if (x.style.display === "block") {
+							y.style.display = "block";
+							x.style.display = "none";
+							
+							b.style.display = "block";
+							a.style.display = "none";
+						} 
+						else if (y.style.display === "block") {
+							x.style.display = "block";
+							y.style.display = "none";
+							a.style.display = "block";
+							b.style.display = "none";
+						} 
+						
+						
+					}
+					
+				</script>
+				
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+				<!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+				<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+				<script src="stt/script.js"></script>
+				<script>
+					$('.buttonsindhi').click(function(){ $('#note-textarea').keydown(); });
+				</script>
+			</body>
+		</html>																																						
